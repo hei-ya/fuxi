@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>假日旅行</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=2,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<header class="header">
+    <h1>假日旅行</h1>
+</header>
+
+<section class="content">
+    <div class="banner">
+        <div class="banner-container swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/banner/banner_01.jpg" alt="徒步旅行"></div>
+                <div class="swiper-slide"><img src="images/banner/banner_01.jpg" alt="徒步旅行"></div>
+            </div>
+            <div class="swiper-pagination">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="navgiatior clearfix">
+        <dl class="col-xs-3">
+            <dt><img src="images/icons/home/sport.jpg" alt="热门景点"></dt>
+            <dd class="text-nobr">热门景点</dd>
+        </dl>
+        <dl class="col-xs-3">
+            <dt><img src="images/icons/home/booksheet.jpg" alt="记账薄"></dt>
+            <dd class="text-nobr">记账薄</dd>
+        </dl>
+        <dl class="col-xs-3">
+            <dt><img src="images/icons/home/territory.jpg" alt="境内/境外"></dt>
+            <dd class="text-nobr">境内/境外</dd>
+        </dl>
+        <dl class="col-xs-3">
+            <dt><img src="images/icons/home/ship.jpg" alt="轮船票"></dt>
+            <dd class="text-nobr">轮船票</dd>
+        </dl>
+        <dl class="col-xs-3">
+            <dt><img src="images/icons/home/hotel.jpg" alt="酒店"></dt>
+            <dd class="text-nobr">酒店</dd>
+        </dl>
+        <dl class="col-xs-3">
+            <dt><img src="images/icons/home/plane.jpg" alt="飞机票"></dt>
+            <dd class="text-nobr">飞机票</dd>
+        </dl>
+        <dl class="col-xs-3">
+            <dt><img src="images/icons/home/train.jpg" alt="火车票"></dt>
+            <dd class="text-nobr">火车票</dd>
+        </dl>
+        <dl class="col-xs-3">
+            <dt><img src="images/icons/home/record.jpg" alt="行程记录"></dt>
+            <dd class="text-nobr">行程记录</dd>
+        </dl>
+    </div>
+    <div class="navgiatior-list clearfix">
+        <div class="col-xs-6  col-md-3">
+            <dl>
+                <dt><i class="fa fa-ambulance"></i></dt>
+                <dd>
+                    <h3 class="text-danger">热销榜</h3>
+                    <p>大家都爱玩</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="col-xs-6  col-md-3">
+            <dl>
+                <dt><i class="fa fa-ambulance"></i></dt>
+                <dd>
+                    <h3 class="text-blue">我身边</h3>
+                    <p>附近有什么</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="col-xs-6  col-md-3">
+            <dl>
+                <dt><i class="fa fa-ambulance"></i></dt>
+                <dd>
+                    <h3 class="text-info ">千元出国</h3>
+                    <p>周二、五开抢</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <dl>
+                <dt><i class="fa fa-ambulance"></i></dt>
+                <dd>
+                    <h3 class="text-orange">旅游日历</h3>
+                    <p>1元门票早知道</p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <ul>
+        <li class="col-xs-3 home-active">
+            <i class="fa fa-home"></i>
+            <span>首页</span>
+        </li>
+        <li class="col-xs-3">
+            <i class="fa fa-list-alt"></i>
+            <span>订单</span>
+        </li>
+        <li class="col-xs-3">
+            <i class="fa fa-user"></i>
+            <span>我的</span>
+        </li>
+        <li class="col-xs-3">
+            <i class="fa fa-modx"></i>
+            <span>更多</span>
+        </li>
+    </ul>
+</footer>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    new Swiper('.banner-container',{
+        pagination:".swiper-pagination",
+        paginationType:"progress"
+    })
+
+    $('.footer ul li').click(function(){
+        $(this).addClass('home-active').siblings().removeClass('home-active');
+    })
+</script>
+</body>
+</html>

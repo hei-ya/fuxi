@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>火车</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=2,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/train.css">
+</head>
+<body>
+<header class="header">
+    <h1>火车</h1>
+</header>
+<section class="content">
+    <div class="query">
+        <ul>
+            <li class="query-tab">站站查询</li>
+            <li>车次查询</li>
+            <li>车站查询</li>
+        </ul>
+    </div>
+    <div class="details">
+        <ul>
+            <li>
+                <h3><i class="fa fa-train"></i>出发站点</h3>
+                <div class="details-more">
+                    <span>北京</span>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+            </li>
+            <li>
+                <h3><i class="fa fa-trello"></i>到达站点</h3>
+                <div class="details-more">
+                    <span>北京</span>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+            </li>
+            <li>
+                <h3><i class="fa fa-calendar"></i>出发日期</h3>
+                <div class="details-more">
+                    <span class="departureDate">2014-06-22 明天</span>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+            </li>
+            <li>
+                <h3><i class="fa fa-train"></i>只搜索高铁/动车</h3>
+                <div class="details-more">
+                    <div class="toggle toggle-switch">
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox" class="track">
+                            <span class="icon"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="display: none;">
+            <li>
+                <h3><i class="fa fa-train"></i>出发站点</h3>
+
+                <div class="details-more">
+                    <span>北京</span>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+            </li>
+            <li>
+                <h3><i class="fa fa-train"></i>出发站点</h3>
+
+                <div class="details-more">
+                    <span>北京</span>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+            </li>
+            <li>
+                <h3><i class="fa fa-calendar"></i>出发日期</h3>
+
+                <div class="details-more">
+                    <span>2014-06-22 明天</span>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+            </li>
+            <li>
+                <h3><i class="fa fa-train"></i>只搜索高铁/动车</h3>
+                <div class="details-more">
+                    <div class="toggle toggle-switch">
+                        <input type="checkbox" id="checkbox1">
+                        <label for="checkbox1" class="track">
+                            <span class="icon"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul style="display: none;">
+            <li>
+                <h3><i class="fa fa-train"></i>出发站点</h3>
+                <div class="details-more">
+                    <span>北京</span>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+            </li>
+            <li>
+                <h3><i class="fa fa-train"></i>出发站点</h3>
+                <div class="details-more">
+                    <span>北京</span>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+            </li>
+            <li>
+                <h3><i class="fa fa-calendar"></i>出发日期</h3>
+                <div class="details-more">
+                    <span>2014-06-22 明天</span>
+                    <i class="fa fa-chevron-right"></i>
+                </div>
+            </li>
+            <li>
+                <h3><i class="fa fa-train"></i>只搜索高铁/动车</h3>
+                <div class="details-more">
+                    <div class="toggle toggle-switch">
+                        <input type="checkbox" id="checkbox2">
+                        <label for="checkbox2" class="track">
+                            <span class="icon"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="search-button col-xs-12">
+        <button type="button" data-target="#myModal" data-toggle="modal" class="btn btn-warning"><i class="fa fa-search"></i>搜索</button>
+    </div>
+</section>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>搜索成功</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                <button type="button" class="btn btn-success">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+    $('.query ul li').click(function(){
+        $(this).addClass('query-tab').siblings().removeClass('query-tab');
+        var index = $(this).index();
+        $('.details ul').eq(index).show().siblings().hide();
+    });
+    $('.departureDate').click(function(){
+        location.href = 'date.html';
+    });
+</script>
+</body>
+</html>

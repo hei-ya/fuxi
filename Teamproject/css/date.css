@@ -1,0 +1,29 @@
+.rili {
+  width: 100%;
+  height: 350px;
+  text-align: center;
+  background: #fff; }
+  .rili h3 {
+    height: 0.4rem;
+    line-height: 0.4rem; }
+  .rili > ul {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center; }
+    .rili > ul > li {
+      float: left;
+      width: 14%; }
+  .rili > ol {
+    width: 100%; }
+    .rili > ol > li {
+      width: 14%;
+      height: 45px;
+      float: left;
+      text-align: center;
+      line-height: 45px; }
+
+.last {
+  background: #eee; }
+
+/*# sourceMappingURL=date.css.map */

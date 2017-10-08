@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>火车</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=2,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/date.css">
+</head>
+<body>
+    <header class="header">
+        <h1>火车</h1>
+    </header>
+    <section class="content">
+
+    </section>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function getDate(){
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth();
+            var year = date.getFullYear();
+
+            var title = year + '-' + (month+1);
+            var firstday = new Date(year,month,1).getDay();
+            var lastDate = new Date(year,month+1,0).getDate();
+            var str = '';
+            for(var i = 0;i<42;i++){
+                var week = new Date(year,month,i-firstday).getDate();
+                if(i-firstday<=0 || i-firstday > lastDate){
+                    str +='<li class="last">'+week+'</li>';
+                }else{
+                    str +='<li>'+week+'</li>';
+                }
+            }
+
+            var str1 = '<div class="rili">'+
+                    '<h3><b class="left"><</b>'+
+                    '<span>'+title+'</span>'+'<b class="right">></b>'+
+                    '</h3>'+
+                    '<ul>'+
+                    '<li>日</li>'+
+                    '<li>一</li>'+
+                    '<li>二</li>'+
+                    '<li>三</li>'+
+                    '<li>四</li>'+
+                    '<li>五</li>'+
+                    '<li>六</li>'+
+                    '</ul>'+
+                    '<ol>'+str+'</ol>'+
+                    '</div>';
+            $(str1).appendTo($('.content'));
+        }
+        getDate();
+    </script>
+</body>
+</html>
